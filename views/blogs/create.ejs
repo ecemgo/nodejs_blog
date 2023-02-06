@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<body>
+    
+    <%- include('../partials/nav.ejs') %>
+
+    <div class="create-blog content">
+        <form action="/blogs" method="POST">
+            <label for="title">Blog title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="snippet">Blog snippet:</label>
+            <input type="text" id="snippet" name="snippet" required>
+            <label for="body">Blog body:</label>
+            <textarea id="body" name="body" required></textarea>
+            <button>Submit</button>
+        </form>
+    </div> 
+
+    <%- include('../partials/footer.ejs') %>
+
+    <script>
+    // const ele = document.getElementById('body');
+
+    // ele.addEventListener('keydown', function (e) {
+    //     // Get the code of pressed key
+    //     const keyCode = e.which || e.keyCode;
+
+    //     // 13 represents the Enter key
+    //     if (keyCode === 13 && !e.shiftKey) {
+    //         // Don't generate a new line
+    //         e.preventDefault();
+
+    //         // Do something else such as send the message to back-end
+    //         // ...
+    //     }
+    // });
+
+    // $('#body').keydown(function(event) {
+    //     if (event.keyCode == 13) {
+    //         event.preventDefault();
+    //         var s = $(this).val();
+    //         $(this).val(s + "\n");
+    //     }
+    // });
+
+    </script>
+</body>
+</html>
